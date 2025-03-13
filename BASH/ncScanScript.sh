@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "USAGE: {./netcatScanScript.sh | proxychains ./netcatScanScript.sh}"
+echo "USAGE: {./ncScanScript.sh | proxychains ./ncScanScript.sh}"
 echo "Enter network address (e.g. 192.168.0): "
 read net
 echo "Enter starting host range (e.g. 1): "
