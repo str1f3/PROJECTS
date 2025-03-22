@@ -1,3 +1,17 @@
+#######################################################################################
+# Dev: cnd.dev
+# Program Name: powerBallRandomNumberGenerator-v1.0.0-linux-x86-64
+# Version: 1.0.0
+#  - Major.Minor.Update
+# Date: 2017
+# Filename: powerBallRandomNumberGenerator.py
+# Dependency: N/A
+# Compile Cmd: N/A
+# Synopsis:
+#  - Overview: describes what the program does, how it works, and its key components
+#  - Technical: ...
+#######################################################################################
+
 import random
 
 minWhiteNumber = 1
