@@ -8,7 +8,8 @@
 # Compile Cmd: gcc -m64 -O1 BitwiseCalculator.c -o BitwiseCalculator
 # Synopsis: ... describes what the program does, 
 #               how it works, and its key components
-# this will eventually be fed to a database
+# this will eventually be fed to a database and/or turned into
+# a function for use in a validation function
 ##################################################################*/
 
 
