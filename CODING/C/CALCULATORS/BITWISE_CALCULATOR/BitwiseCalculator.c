@@ -1,13 +1,15 @@
 /*##################################################################
 # Dev: cnd.dev
 # Program Name: BitwiseCalculator
-# Version: 1.0.0               //Major.Minor.Update
+# Version: 1.0.1               //Major.Minor.Update
 # Date: 181445MAR25
 # Filename: BitwiseCalculator.c
 # Dependency: N/A
 # Compile Cmd: gcc -m64 -O1 BitwiseCalculator.c -o BitwiseCalculator
 # Synopsis: ... describes what the program does, 
 #               how it works, and its key components
+# Changelog: 
+#  - limited the digits users can enter %1d
 ##################################################################*/
 
 #include <stdio.h>
@@ -23,7 +25,7 @@ int main(int argc, char *argv[]) {
   int binaryResult = 0;
     
   puts("Select mode: [1=&], [2=|], [3=^], [4=~]");
-  while (printf("mode: "), scanf("%d", &mode) != 1){
+  while (printf("mode: "), scanf("%1d", &mode) != 1){
     while (getchar() != '\n');
   }
     
@@ -32,10 +34,10 @@ int main(int argc, char *argv[]) {
             
       //input
       puts("\nAND MODE");
-      while (printf("Enter first number: "), scanf("%d", &userInput1) != 1)
+      while (printf("Enter first number: "), scanf("%1d", &userInput1) != 1)
         while (getchar() != '\n');
             
-      while (printf("Enter second number: "), scanf("%d", &userInput2) != 1)
+      while (printf("Enter second number: "), scanf("%1d", &userInput2) != 1)
         while (getchar() != '\n');
             
       //process
@@ -57,10 +59,10 @@ int main(int argc, char *argv[]) {
       
       //input
       puts("\nOR MODE");
-      while (printf("Enter first number: "), scanf("%d", &userInput1) != 1)
+      while (printf("Enter first number: "), scanf("%1d", &userInput1) != 1)
         while (getchar() != '\n');
             
-      while (printf("Enter second number: "), scanf("%d", &userInput2) != 1)
+      while (printf("Enter second number: "), scanf("%1d", &userInput2) != 1)
         while (getchar() != '\n');
             
       //process
@@ -81,10 +83,10 @@ int main(int argc, char *argv[]) {
     case 3:{
       //input
       puts("\nXOR MODE");
-      while (printf("Enter first number: "), scanf("%d", &userInput1) != 1)
+      while (printf("Enter first number: "), scanf("%1d", &userInput1) != 1)
         while (getchar() != '\n');
             
-      while (printf("Enter second number: "), scanf("%d", &userInput2) != 1)
+      while (printf("Enter second number: "), scanf("%1d", &userInput2) != 1)
         while (getchar() != '\n');
             
       //process
@@ -105,7 +107,7 @@ int main(int argc, char *argv[]) {
     case 4:{
       //input
       puts("\nNOT MODE");
-      while (printf("Enter a value to negate: "), scanf("%d", &userInput1) != 1)
+      while (printf("Enter a value to negate: "), scanf("%1d", &userInput1) != 1)
         while (getchar() != '\n');
             
       //process
