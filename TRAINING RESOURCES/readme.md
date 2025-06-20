@@ -4,21 +4,21 @@ This learning plan outlines the resources and topics I am actively pursuing. It 
 ## PROGRAMMING
 ### C PROGRAMMING
 #### MAIN
- - [01.C Essentials 1 (Basics)](https://edube.org/study/ce1 "C Essentials 1 (Basics)")
- - [02.C Essentials 2 (Intermediate)](https://edube.org/study/ce2 "C Essentials 2 (Intermediate)")
- - [03.C Advanced](https://edube.org/study/clp "C Advanced")
- - [04.Windows System Programming](https://learning.oreilly.com/library/view/windows-system-programming/9780321658319/ "Windows System Programming")
+ - [01.C Language w/ Beginner DSA](https://www.codechef.com/roadmap/c-dsa "C language with Beginner DSA")
+ - [02.C Essentials 1 (Basics)](https://edube.org/study/ce1 "C Essentials 1 (Basics)")
+ - [03.C Essentials 2 (Intermediate)](https://edube.org/study/ce2 "C Essentials 2 (Intermediate)")
+ - [04.C Advanced](https://edube.org/study/clp "C Advanced")
+ - [05.Windows System Programming](https://learning.oreilly.com/library/view/windows-system-programming/9780321658319/ "Windows System Programming")
 
 #### SUPPLEMENTAL
- - [01.C Language w/ Beginner DSA](https://www.codechef.com/roadmap/c-dsa "C language with Beginner DSA")
- - [02.Windows System Programming: Fundamentals](https://my.ine.com/CyberSecurity/courses/b6f465e1/windows-system-programming-fundamentals "Windows System Programming: Fundamentals")
- - [03.Windows System Programming: Processes and Threads
+ - [01.Windows System Programming: Fundamentals](https://my.ine.com/CyberSecurity/courses/b6f465e1/windows-system-programming-fundamentals "Windows System Programming: Fundamentals")
+ - [02.Windows System Programming: Processes and Threads
 ](https://my.ine.com/CyberSecurity/courses/cd89b53e/windows-system-programming-processes-and-threads "Windows System Programming: Processes and Threads")
- - [04.Windows System Programming: Memory Management
+ - [03.Windows System Programming: Memory Management
 ](https://my.ine.com/CyberSecurity/courses/f020cde3/windows-system-programming-memory-management "Windows System Programming: Memory Management")
- - [05.Windows Kernel Programming: Fundamentals
+ - [04.Windows Kernel Programming: Fundamentals
 ](https://my.ine.com/CyberSecurity/courses/d5e1d053/windows-kernel-programming-fundamentals "Windows Kernel Programming: Fundamentals")
- - [06.Windows System Programming: Security](https://my.ine.com/CyberSecurity/courses/4744a81e/windows-system-programming-security "Windows System Programming: Security")
+ - [05.Windows System Programming: Security](https://my.ine.com/CyberSecurity/courses/4744a81e/windows-system-programming-security "Windows System Programming: Security")
 
 
 ### C++ PROGRAMMING
