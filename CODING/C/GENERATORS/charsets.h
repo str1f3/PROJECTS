@@ -8,16 +8,18 @@
 # Dependency: N/A
 # Compile Cmd: N/A
 # Synopsis:
-#  - Overview: describes what the program does, how it works, and its key components
-#  - Technical: ...
+#  - Overview: Declares functions for populating arrays with specific character sets 
+#              (uppercase, lowercase, digits, symbols) using ASCII values.
+#  - Technical: Intended for programs that need predefined character arrays, such as
+#               password generators or data format validators.
 ######################################################################################*/
-
+​
 #ifndef CHARSETS_H
 #define CHARSETS_H
-
+​
 void populateUppercase(char uppercaseLetters[]);
 void populateLowercase(char lowercaseLetters[]);
 void populateNumbers(char numbers[]);
 void populateSymbols(char symbols[]);
-
+​
 #endif
