@@ -1,20 +1,19 @@
-/*##################################################################
+/*######################################################################################
 # Dev: cnd.dev
-# Program Name: BitwiseCalculator
-# Version: 1.0.1               //Major.Minor.Update
+# Program Name: BitwiseCalculator-v1.0.0-linux-x86-64
+# Version: 1.0.0
+#  - Major.Minor.Update
 # Date: 181445MAR25
-# Filename: BitwiseCalculator.c
+# Filename: bitwiseCalculator.c
 # Dependency: N/A
-# Compile Cmd: gcc -m64 -O1 BitwiseCalculator.c -o BitwiseCalculator
-# Synopsis: ... describes what the program does, 
-#               how it works, and its key components
-# Changelog: 
-#  - limited the digits users can enter %1d
-##################################################################*/
+# Compile Cmd: gcc -m64 -O1 bitwiseCalculator.c -o BitwiseCalculator-v1.0.0-linux-x86-64
+# Synopsis:
+#  - Overview: describes what the program does, how it works, and its key components
+#  - Technical: ...
+######################################################################################*/
 
 #include <stdio.h>
-
-int decimalToBinary(int userInput);
+#include "bitwise.h"
 
 int main(int argc, char *argv[]) {
 
@@ -25,20 +24,15 @@ int main(int argc, char *argv[]) {
   int binaryResult = 0;
     
   puts("Select mode: [1=&], [2=|], [3=^], [4=~]");
-  while (printf("mode: "), scanf("%1d", &mode) != 1){
-    while (getchar() != '\n');
-  }
+  selectMode(&mode);
+  
     
   switch (mode){
     case 1:{
             
       //input
       puts("\nAND MODE");
-      while (printf("Enter first number: "), scanf("%1d", &userInput1) != 1)
-        while (getchar() != '\n');
-            
-      while (printf("Enter second number: "), scanf("%1d", &userInput2) != 1)
-        while (getchar() != '\n');
+      getData(&userInput1, &userInput2);
             
       //process
       decimalResult = (userInput1 & userInput2);
@@ -46,7 +40,8 @@ int main(int argc, char *argv[]) {
       //show them in binary as well (future)
       int userInput1Binary = decimalToBinary(userInput1);
       int userInput2Binary = decimalToBinary(userInput2);
-      binaryResult = (userInput1Binary & userInput2Binary);
+      binaryResult = decimalToBinary(decimalResult);
+
             
       //output
       printf("Binary: %d AND %d = %d\n", userInput1Binary, userInput2Binary, binaryResult);
@@ -59,11 +54,7 @@ int main(int argc, char *argv[]) {
       
       //input
       puts("\nOR MODE");
-      while (printf("Enter first number: "), scanf("%1d", &userInput1) != 1)
-        while (getchar() != '\n');
-            
-      while (printf("Enter second number: "), scanf("%1d", &userInput2) != 1)
-        while (getchar() != '\n');
+      getData(&userInput1, &userInput2);
             
       //process
       decimalResult = (userInput1 | userInput2);
@@ -71,7 +62,7 @@ int main(int argc, char *argv[]) {
       //show them in binary as well (future)
       int userInput1Binary = decimalToBinary(userInput1);
       int userInput2Binary = decimalToBinary(userInput2);
-      binaryResult = (userInput1Binary & userInput2Binary);
+      binaryResult = decimalToBinary(decimalResult);
             
       //output
       printf("Binary: %d OR %d = %d\n", userInput1Binary, userInput2Binary, binaryResult);
@@ -83,11 +74,7 @@ int main(int argc, char *argv[]) {
     case 3:{
       //input
       puts("\nXOR MODE");
-      while (printf("Enter first number: "), scanf("%1d", &userInput1) != 1)
-        while (getchar() != '\n');
-            
-      while (printf("Enter second number: "), scanf("%1d", &userInput2) != 1)
-        while (getchar() != '\n');
+      getData(&userInput1, &userInput2);
             
       //process
       decimalResult = (userInput1 ^ userInput2);
@@ -95,7 +82,7 @@ int main(int argc, char *argv[]) {
       //show them in binary as well (future)
       int userInput1Binary = decimalToBinary(userInput1);
       int userInput2Binary = decimalToBinary(userInput2);
-      binaryResult = (userInput1Binary ^ userInput2Binary);
+      binaryResult = decimalToBinary(decimalResult);
             
       //output
       printf("Binary: %d XOR %d = %d\n", userInput1Binary, userInput2Binary, binaryResult);
@@ -107,7 +94,7 @@ int main(int argc, char *argv[]) {
     case 4:{
       //input
       puts("\nNOT MODE");
-      while (printf("Enter a value to negate: "), scanf("%1d", &userInput1) != 1)
+      while (printf("Enter a value to negate: "), scanf("%d", &userInput1) != 1)
         while (getchar() != '\n');
             
       //process
@@ -126,26 +113,8 @@ int main(int argc, char *argv[]) {
         
     default:{
       puts("Invalid selection...re-run the program again to continue");
-      break;
     }
   }
 
   return 0;
-}
-
-int decimalToBinary(int userInput){
-    
-  int binaryRepresentation = 0;
-  int i = 1;
-  int remainder;
-    
-  while (userInput != 0){
-    
-    remainder = userInput % 2;
-    userInput /= 2;
-    binaryRepresentation += remainder * i;
-    i *= 10;
-  }
-  
-  return binaryRepresentation;
 }
