@@ -8,7 +8,9 @@ This learning plan outlines the resources and topics I am actively pursuing. It 
  - [02.C Essentials 1 (Basics)](https://edube.org/study/ce1 "C Essentials 1 (Basics)")
  - [03.C Essentials 2 (Intermediate)](https://edube.org/study/ce2 "C Essentials 2 (Intermediate)")
  - [04.C Advanced](https://edube.org/study/clp "C Advanced")
- - [05.Windows System Programming](https://learning.oreilly.com/library/view/windows-system-programming/9780321658319/ "Windows System Programming")
+ - [05.Beej's Guide to Network Programming](https://beej.us/guide/ "Network Programming")
+ - [06.Hands-On Network Programming with C](https://learning.oreilly.com/library/view/hands-on-network-programming/9781789349863/ "Network Programming")
+ - [07.Windows System Programming](https://learning.oreilly.com/library/view/windows-system-programming/9780321658319/ "Windows System Programming")
 
 #### SUPPLEMENTAL
  - [01.Windows System Programming: Fundamentals](https://my.ine.com/CyberSecurity/courses/b6f465e1/windows-system-programming-fundamentals "Windows System Programming: Fundamentals")
