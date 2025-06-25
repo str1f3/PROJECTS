@@ -40,13 +40,11 @@ This learning plan outlines the resources and topics I am actively pursuing. It 
 
 ### PYTHON PROGRAMMING
 #### MAIN
- - [01.Python Essentials - Part 1 (Basics)](https://edube.org/study/pe1 "Python Essentials - Part 1 (Basics)")
- - [02.Python Essentials - Part 2 (Intermediate)](https://edube.org/study/pe2 "Python Essentials - Part 2 (Intermediate)")
- - [03.Python Advanced 1: OOP](https://edube.org/study/pcpp1-1 "Python Advanced 1: OOP")
- - [04.Python Advanced 2: PEP](https://edube.org/study/pcpp1-2 "Python Advanced 2: PEP")
- - [05.Python Advanced 3: GUI Programming](https://edube.org/study/pcpp1-3 "Python Advanced 3: GUI Programming")
- - [06.Python Advanced 4: RESTful APIs](https://edube.org/study/pcpp1-4 "Python Advanced 4: RESTful APIs")
- - [07.Python Advanced 5: File Processing](https://edube.org/study/pcpp1-5 "Python Advanced 5: File Processing")
-
-#### SUPPLEMENTAL
  - [01.Python with Beginner DSA](https://www.codechef.com/roadmap/python-dsa "Python with Beginner DSA")
+ - [02.Python Essentials - Part 1 (Basics)](https://edube.org/study/pe1 "Python Essentials - Part 1 (Basics)")
+ - [03.Python Essentials - Part 2 (Intermediate)](https://edube.org/study/pe2 "Python Essentials - Part 2 (Intermediate)")
+ - [04.Python Advanced 1: OOP](https://edube.org/study/pcpp1-1 "Python Advanced 1: OOP")
+ - [05.Python Advanced 2: PEP](https://edube.org/study/pcpp1-2 "Python Advanced 2: PEP")
+ - [06.Python Advanced 3: GUI Programming](https://edube.org/study/pcpp1-3 "Python Advanced 3: GUI Programming")
+ - [07.Python Advanced 4: RESTful APIs](https://edube.org/study/pcpp1-4 "Python Advanced 4: RESTful APIs")
+ - [08.Python Advanced 5: File Processing](https://edube.org/study/pcpp1-5 "Python Advanced 5: File Processing")
