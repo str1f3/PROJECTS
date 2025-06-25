@@ -4,14 +4,19 @@ This learning plan outlines the resources and topics I am actively pursuing. It 
 ## PROGRAMMING
 ### C PROGRAMMING
 #### MAIN
+##### LINUX
  - [01.C Language w/ Beginner DSA](https://www.codechef.com/roadmap/c-dsa "C language with Beginner DSA")
  - [02.C Essentials 1 (Basics)](https://edube.org/study/ce1 "C Essentials 1 (Basics)")
  - [03.C Essentials 2 (Intermediate)](https://edube.org/study/ce2 "C Essentials 2 (Intermediate)")
  - [04.C Advanced](https://edube.org/study/clp "C Advanced")
  - [05.Beej's Guide to Network Programming](https://beej.us/guide/ "Network Programming")
  - [06.Hands-On Network Programming with C](https://learning.oreilly.com/library/view/hands-on-network-programming/9781789349863/ "Network Programming")
- - [07.Windows System Programming](https://learning.oreilly.com/library/view/windows-system-programming/9780321658319/ "Windows System Programming")
- - [08.Basic Capability Developer](https://ccds.pages.levelup.cce.af.mil/training/basic/curriculum/index.html "Basic Capability Developer")
+ - [07.Basic Capability Developer](https://ccds.pages.levelup.cce.af.mil/training/basic/curriculum/index.html "Basic Capability Developer")
+
+##### WINDOWS
+ - [01.Programming Windows](https://learning.oreilly.com/library/view/programming-windows-r-fifth/9780735642225/ "Programming Windows®, Fifth Edition")
+ - [02.The Forger's Win32 API Tutorial](https://winprog.org/tutorial/ "Win 32 API Tutorial")
+ - [03.Windows System Programming](https://learning.oreilly.com/library/view/windows-system-programming/9780321658319/ "Windows System Programming")
 
 #### SUPPLEMENTAL
  - [01.Windows System Programming: Fundamentals](https://my.ine.com/CyberSecurity/courses/b6f465e1/windows-system-programming-fundamentals "Windows System Programming: Fundamentals")
