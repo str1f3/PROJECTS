@@ -8,10 +8,10 @@ This is my personal portfolio, created to demonstrate projects I'm actively work
 Projects focused on software development, system programming, and algorithm implementation.
 
 ### CYBER RANGE
-Contains a link to my GitBook page, where I conduct proof-of-concept experiments.
+Contains a link to my GitBook page, where I conduct proof-of-concept experiments and documentation.
 
 ### DSU
-Archied coursework and academic exercises from Dakota State University (DSU), demonstrating foundational computer science knowledge and structured problem-solving.
+Archived coursework and academic exercises from Dakota State University (DSU), demonstrating foundational computer science knowledge and structured problem-solving.
 
 ### SRE
 This section is dedicated to Software Reverse Engineering projects, including static/dynamic analysis, binary dissectionn, and tooling exploration.
