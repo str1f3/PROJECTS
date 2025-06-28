@@ -6,7 +6,7 @@
 # Date: 181445MAR25
 # Filename: bitwise.h
 # Dependency: N/A
-# Compile Cmd: gcc -m64 -O1 bitwiseCalculator.c -o BitwiseCalculator-v1.0.0-linux-x86-64
+# Compile Cmd: N/A
 # Synopsis:
 #  - Overview: describes what the program does, how it works, and its key components
 #  - Technical: ...
