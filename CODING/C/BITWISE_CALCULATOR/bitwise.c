@@ -6,12 +6,16 @@
 # Date: 181445MAR25
 # Filename: bitwise.c
 # Dependency: bitwise.h
-# Compile Cmd: gcc -m64 -O1 bitwiseCalculator.c -o BitwiseCalculator-v1.0.0-linux-x86-64
+# Compile Cmd: N/A
 # Synopsis:
 #  - Overview: describes what the program does, how it works, and its key components
 #  - Technical: ...
 ######################################################################################*/
 
+#include <stdio.h>
+#include "bitwise.h"
+
+//INPUT
 int selectMode(int* mode){
   while (printf("mode: "), scanf("%d", mode) != 1){
     while (getchar() != '\n');
@@ -20,29 +24,54 @@ int selectMode(int* mode){
 }
 
 int getData(int* userInput1, int* userInput2){
-  while (printf("Enter first number: "), scanf("%d", userInput1) != 1){
+    char buffer1[33];
+    char buffer2[33];
+
+    while (printf("Enter first number (binary): \t"), scanf("%32s", buffer1) != 1)
         while (getchar() != '\n');
-  }
-  while (printf("Enter second number: "), scanf("%d", userInput2) != 1){
+
+    while (printf("Enter second number (binary): \t"), scanf("%32s", buffer2) != 1)
         while (getchar() != '\n');
-  }
-  return 0;
+
+    *userInput1 = binaryStringToInt(buffer1);
+    *userInput2 = binaryStringToInt(buffer2);
+
+    return 0;
 }
 
+//PROCESS
+int binaryStringToInt(const char* binaryStr) {
+    int result = 0;
+    
+    while (*binaryStr == '0' || *binaryStr == '1') {
+        result = result * 2 + (*binaryStr - '0');
+        binaryStr++; 
+    }
+    
+    return result;
+}
+int bitwiseAND(int userInput1, int userInput2){
+  return userInput1 & userInput2;
+}
 
-int decimalToBinary(int userInput){
-    
-  int binaryRepresentation = 0;
-  int i = 1;
-  int remainder;
-    
-  while (userInput != 0){
-    
-    remainder = userInput % 2;
-    userInput /= 2;
-    binaryRepresentation += remainder * i;
-    i *= 10;
+int bitwiseOR(int userInput1, int userInput2){
+  return userInput1 | userInput2;
+}
+
+int bitwiseXOR(int userInput1, int userInput2){
+  return userInput1 ^ userInput2;
+}
+
+int bitwiseNOT(int userInput1){
+  return ~userInput1;
+}
+
+//OUTPUT
+void printBinary(unsigned int result){
+  for (int i = 31; i >= 0; i--) {
+    printf("%d", (result >> i) & 1);
+      if (i % 8 == 0 && i != 0) {
+        printf(" ");  
+      }
   }
-  
-  return binaryRepresentation;
 }
