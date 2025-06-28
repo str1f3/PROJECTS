@@ -1,12 +1,12 @@
 /*######################################################################################
 # Dev: cnd.dev
 # Program Name: BitwiseCalculator-v1.0.0-linux-x86-64
-# Version: 1.0.0
+# Version: 1.0.1
 #  - Major.Minor.Update
 # Date: 181445MAR25
 # Filename: bitwiseCalculator.c
 # Dependency: N/A
-# Compile Cmd: gcc -m64 -O1 bitwiseCalculator.c -o BitwiseCalculator-v1.0.0-linux-x86-64
+# Compile Cmd: gcc -m64 -O1 bitwiseCalculator.c bitwise.h bitwise.c -o BitwiseCalculator-v1.0.0-linux-x86-64
 # Synopsis:
 #  - Overview: describes what the program does, how it works, and its key components
 #  - Technical: ...
@@ -20,32 +20,26 @@ int main(int argc, char *argv[]) {
   int mode = 0;
   int userInput1 = 0;
   int userInput2 = 0;
-  int decimalResult = 0;
-  int binaryResult = 0;
+  unsigned int andResult = 0;
+  unsigned int orResult = 0;
+  unsigned int xorResult = 0;
+  unsigned int notResult = 0;
     
   puts("Select mode: [1=&], [2=|], [3=^], [4=~]");
   selectMode(&mode);
   
-    
   switch (mode){
     case 1:{
             
       //input
-      puts("\nAND MODE");
+      puts("\n*******AND MODE*******");
       getData(&userInput1, &userInput2);
             
       //process
-      decimalResult = (userInput1 & userInput2);
-            
-      //show them in binary as well (future)
-      int userInput1Binary = decimalToBinary(userInput1);
-      int userInput2Binary = decimalToBinary(userInput2);
-      binaryResult = decimalToBinary(decimalResult);
-
-            
+      andResult = bitwiseAND(userInput1, userInput2);
+      
       //output
-      printf("Binary: %d AND %d = %d\n", userInput1Binary, userInput2Binary, binaryResult);
-      printf("Decimal: %d AND %d = %d\n", userInput1, userInput2, decimalResult);
+      printBinary(andResult);
             
       break;
     }
@@ -53,60 +47,44 @@ int main(int argc, char *argv[]) {
     case 2:{
       
       //input
-      puts("\nOR MODE");
+      puts("\n*******OR MODE*******");
       getData(&userInput1, &userInput2);
             
       //process
-      decimalResult = (userInput1 | userInput2);
-            
-      //show them in binary as well (future)
-      int userInput1Binary = decimalToBinary(userInput1);
-      int userInput2Binary = decimalToBinary(userInput2);
-      binaryResult = decimalToBinary(decimalResult);
+      orResult = bitwiseOR(userInput1, userInput2);
             
       //output
-      printf("Binary: %d OR %d = %d\n", userInput1Binary, userInput2Binary, binaryResult);
-      printf("Decimal: %d OR %d = %d\n", userInput1, userInput2, decimalResult);
+      printBinary(orResult);
     
       break;
     }
         
     case 3:{
       //input
-      puts("\nXOR MODE");
+      puts("\n*******XOR MODE*******");
       getData(&userInput1, &userInput2);
             
       //process
-      decimalResult = (userInput1 ^ userInput2);
-            
-      //show them in binary as well (future)
-      int userInput1Binary = decimalToBinary(userInput1);
-      int userInput2Binary = decimalToBinary(userInput2);
-      binaryResult = decimalToBinary(decimalResult);
+      xorResult = bitwiseXOR(userInput1, userInput2);
+
             
       //output
-      printf("Binary: %d XOR %d = %d\n", userInput1Binary, userInput2Binary, binaryResult);
-      printf("Decimal: %d XOR %d = %d\n", userInput1, userInput2, decimalResult);
+      printBinary(xorResult);
     
       break;
     }
         
     case 4:{
       //input
-      puts("\nNOT MODE");
+      puts("\n*******NOT MODE*******");
       while (printf("Enter a value to negate: "), scanf("%d", &userInput1) != 1)
         while (getchar() != '\n');
             
       //process
-      decimalResult = ~userInput1;
-            
-      //show them in binary as well (future)
-      int userInput1Binary = decimalToBinary(~userInput1);
-      binaryResult = userInput1Binary;
+      notResult = bitwiseNOT(userInput1);
             
       //output
-      printf("Binary: %d = %d\n", userInput1Binary, binaryResult);
-      printf("Decimal: %d = %d\n", userInput1, decimalResult);
+      printBinary(notResult);
     
       break;
     }
