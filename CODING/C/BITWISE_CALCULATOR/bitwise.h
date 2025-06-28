@@ -21,6 +21,18 @@ int selectMode(int* mode);
 //GET DATA - AND/OR/XOR
 int getData(int* userInput1, int* userInput2);
 
-int decimalToBinary(int userInput);
+//PROCESS DATA
+int binaryStringToInt(const char* binaryStr);
+
+int bitwiseAND(int userInput1, int userInput2);
+
+int bitwiseOR(int userInput1, int userInput2);
+
+int bitwiseXOR(int userInput1, int userInput2);
+
+int bitwiseNOT(int userInput1);
+
+//OUTPUT
+void printBinary(unsigned int result);
 
 #endif
