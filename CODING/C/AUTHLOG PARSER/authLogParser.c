@@ -1,3 +1,4 @@
+
 /*######################################################################################
 # Dev: cnd.dev
 # Program Name: N/A
@@ -15,11 +16,11 @@
 #    system to distinguish between mistyped and malicious logins.
 #  - Technical: ...
 ######################################################################################*/
-
+​
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-
+​
 int selectMode(int *mode) {
   bool selection = true;
   while (selection) {
@@ -31,70 +32,76 @@ int selectMode(int *mode) {
   }
   return 0;
 }
-
+​
 FILE* openFile(){
   int flag = 1;
   char filePath[255] = "auth.log";   //full path /var/log/auth.log
   FILE* file = fopen(filePath, "r");
   return file;
 }
-
+​
 int main(int argc, char *argv[])
 {
   int mode = 0;
-  int totalFailedLogins = 0;
+  unsigned int totalFailedLogins = 0;
+  unsigned int totalSuccessfulLogins = 0;
   unsigned char lineReadBuffer = 255;
   char readLines[lineReadBuffer];
   //char delimiter[] = " ";
   //char *token = NULL;
   char failedLoginsMarker[] = "Failed password for";
   char successfulLoginsMarker[] = "Accepted password for";
-
-
-  puts("Select Mode: [1 = Successful Logins] | [2 = Failed logins]");
+​
+​
+  puts("Select Mode: ");
+  //puts("1. Brute Force Detection: ");
+  //puts("2. Command Injection Detection: ");
+  puts("1. Failed Logins");
+  puts("2. Successful Logins");
+​
   selectMode(&mode);
-  
+​
   //INPUT
   FILE* file = openFile();
-  
-    if (file == NULL){
-      puts("Error opening file.\n");
-      puts("Rerun the program to continue...");
-    }
-    else{
-      puts("File Successfully Opened");
-      
-      //PROCESS
-      //1.FAILED LOGINS - test if accessed file can be read
-      while(fgets(readLines, sizeof(readLines), file)){
-        if (strstr(readLines, failedLoginsMarker)){
-          printf("%s", readLines);
+​
+  if (file == NULL){
+    puts("Error opening file.\n");
+    puts("Rerun the program to continue...");
+  }
+  else{
+    puts("File Successfully Opened");
+​
+    switch (mode) {
+      case 1:{
+        puts("******* BRUTE FORCE DETECTION MODE *******");
+        //PROCESS: 1.FAILED LOGINS
+        while(fgets(readLines, sizeof(readLines), file)){
+          if(strstr(readLines, failedLoginsMarker)){
+            printf("%s", readLines);
+            totalFailedLogins++;
+          }
         }
-        else{
-          continue;
-        }
+        printf("\nTotal Failed Logins: %d", totalFailedLogins);
+        break;
       }
-        /*token = strtok(readLines, delimiter);
-        while(token != NULL){
-          if (strcmp
-          //printf("Word: %s\n", token);         //print current word on each line
-          token = strtok(NULL, delimiter);     //move to the next word
+      case 2:{
+        puts("******* BRUTE FORCE DETECTION MODE *******");
+        //PROCESS: 2.SUCCESSFUL LOGINS
+        while(fgets(readLines, sizeof(readLines), file)){
+          if(strstr(readLines, successfulLoginsMarker)){
+            printf("%s", readLines);
+            totalSuccessfulLogins++;
+          }
         }
-      
-        //this printf is for testing only to see the read contents
-        //printf("%s", readLines);
-      }*/
-      //printf("Total Failed Authentications: %d\n", totalFailedLogins);
-      //in auth.log this can be 
-      
-      
-      
-      
-      
-      //2.SUCCESSFUL LOGINS
-          
-      fclose(file);
+        printf("\nTotal Successful Logins: %d", totalSuccessfulLogins);
+        break;
+      }
+      default:{
+        puts("Invalid Selection...rerun the program again to continue.");
+      }
     }
-
+  }
+  fclose(file);
+​
   return 0;
 }
