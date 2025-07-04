@@ -8,10 +8,10 @@ This is a simple C-based terminal game that simulates a PIN guessing challenge. 
 
 ## FEATURES
 
-- Validates 4-digit integer input (`scanf("%4d", ...)`)
+- Validates 4-digit integer input (scanf("%4d", ...))
 - Provides feedback and a basic hint loop
-- Reinforces `do...while` loop control and user interaction
-- Uses `bool` to track system state (`accessGranted` flag)
+- Reinforces do...while` loop control and user interaction
+- Uses bool to track system state (accessGranted flag)
 
 ---
 
@@ -30,6 +30,18 @@ This tool is intentionally minimal but can be extended to include:
 ## DISCLAIMER
 
 This program is for **educational use** only. It is not meant to simulate real-world authentication systems and should not be used for any security-related applications.
+
+---
+
+## REVERSE ENGINEERING NOTE:
+
+Students or researchers interested in learning how to **bypass the hardcoded PIN mechanism** through string/binary patching or stack-based redirection can follow step-by-step guides available on my GitBook:
+
+- [String Patching](https://git.cnd.dev/playbook/sre/reverse-engineering/string-patching)  
+- [Binary Patching](https://git.cnd.dev/playbook/sre/reverse-engineering/binary-patching)  
+- [Stack Redirection](https://git.cnd.dev/playbook/sre/software-exploitation/stack-redirection)
+
+These tutorials provide hands-on examples of basic software exploitation and binary modification techniques using this very program as a test case.
 
 ---
 
