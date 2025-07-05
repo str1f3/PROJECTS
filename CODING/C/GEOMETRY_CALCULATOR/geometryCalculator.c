@@ -35,7 +35,6 @@ int modeSelector(void){
     }
 }
 
-
 int main()
 {
   int operation;
@@ -73,9 +72,9 @@ int main()
     if (operation == 1){
       switch(shape){
         case 1:{
-          double side = 0;
+          double side = 0.0;
       
-          printf("\n\nWhat is the measurement of one of the sides? ");
+          printf("\n\nEnter Side: ");
           scanf("%lf", &side);
       
           GEOMETRY square = squareArea(side);
@@ -88,8 +87,8 @@ int main()
           break;
         }
         case 2:{
-          double length = 0;
-          double width = 0;
+          double length = 0.0;
+          double width = 0.0;
       
           printf("Enter Length: ");
           scanf("%lf", &length);
@@ -107,8 +106,8 @@ int main()
         }
     
         case 3:{
-          double base = 0;
-          double height = 0;
+          double base = 0.0;
+          double height = 0.0;
       
           printf("Enter Base Length: ");
           scanf("%lf", &base);
@@ -125,7 +124,7 @@ int main()
           break;
         }
         case 4:{
-          double radius = 0;
+          double radius = 0.0;
           
           printf("Enter Radius: ");
           scanf("%lf", &radius);
@@ -139,6 +138,243 @@ int main()
           
           break;
         }
+        
+        default:{
+          printf("Invalid Selection! Rerun the program to continue.");
+          break;
+        }
+      }
+    }
+    else if (operation == 2){
+      switch(shape){
+        case 1:{
+          double side = 0.0;
+          
+          printf("\n\nEnter Side: ");
+          scanf("%lf", &side);
+      
+          GEOMETRY square = squarePerimeter(side);
+      
+          printf("\nFormula: 4 * side\n");
+          printf("Input: %.2lf feet\n", side);
+          printf("Calculation: 4 * %.2lf\n", side);
+          printf("Perimeter: %.2lf feet\n", square.perimeter);
+      
+          break;
+        }
+        case 2:{
+          double length = 0.0;
+          double width = 0.0;
+          
+          printf("Enter Length: ");
+          scanf("%lf", &length);
+          printf("Enter Width: ");
+          scanf("%lf", &width);
+          
+          GEOMETRY rectangle = rectanglePerimeter(length, width);
+          
+          printf("\nFormula: 2 * (length + width)\n");
+          printf("Inputs: \n Length: %.2lf feet\n Width: %.2lf feet\n", length, width);
+          printf("Calculation: 2 * (%.2lf + %.2lf)\n", length, width); 
+          printf("Perimeter: %.2lf square feet\n", rectangle.perimeter);
+
+          break;
+        }
+        case 3:{
+          double sideA = 0.0;
+          double sideB = 0.0;
+          double sideC = 0.0;
+          
+          printf("Enter Side A: ");
+          scanf("%lf", &sideA);
+          printf("Enter Side B: ");
+          scanf("%lf", &sideB);
+          printf("Enter Side C: ");
+          scanf("%lf", &sideC);
+      
+          GEOMETRY triangle = trianglePerimeter(sideA, sideB, sideC);
+      
+          printf("\nFormula: Side A + Side B + Side C\n");
+          printf("Inputs: \n Side A: %.2lf feet\n Side B: %.2lf feet\n Side C: %.2lf feet\n", sideA, sideB, sideC);
+          printf("Calculation: Side A + Side B + Side C\n", sideA, sideB, sideC); 
+          printf("Perimeter: %.2lf feet\n", triangle.perimeter);
+  
+          break;
+        }
+        case 4:{
+          double radius = 0.0;
+          
+          printf("Enter Radius: ");
+          scanf("%lf", &radius);
+          
+          GEOMETRY circle = circleCircumference(radius);
+          
+          printf("\nFormula: 2 * PI * radius\n");
+          printf("Input: Radius: %.2lf feet\n", radius);
+          printf("Calculation: 2 * PI * %.2lf\n", radius);
+          printf("Circumference: %.2lf feet\n", circle.perimeter);
+          
+          break;
+        }
+        default:{
+          printf("Invalid Selection! Rerun the program to continue.");
+          break;
+        }
+      }
+    }
+    else if (operation == 3){
+      switch(shape){
+        case 1:{
+          double side = 0.0;
+          
+          printf("\n\nEnter Side: ");
+          scanf("%lf", &side);
+      
+          GEOMETRY cube = cubeSurfaceArea(side);
+      
+          printf("\nFormula: 6 * (side * side)\n");
+          printf("Input: %.2lf feet\n", side);
+          printf("Calculation: 6 * (%.2lf * %.2lf)\n", side);
+          printf("Surface Area: %.2lf square feet\n", cube.surfaceArea);
+          
+          break;
+        }
+        case 2:{
+          double length = 0.0;
+          double width = 0.0;
+          double height = 0.0;
+          
+          printf("Enter Length: ");
+          scanf("%lf", &length);
+          printf("Enter Width: ");
+          scanf("%lf", &width);
+          printf("Enter Height: ");
+          scanf("%lf", &height);
+          
+          GEOMETRY rectangularPrism = rectangularPrismSurfaceArea(length, width, height);
+          
+          printf("\nFormula: 2 * ((length * width) + (length * height) + (width * height))\n");
+          printf("Inputs: \n Length: %.2lf feet\n Width: %.2lf feet\n Height: %.2lf feet", length, width, height);
+          printf("Calculation: 2 * ((%.2lf * %.2lf) + (%.2lf * %.2lf) + (%.2lf * %.2lf))\n", length, width, length, height, width, height); 
+          printf("Surface Area: %.2lf square feet\n", rectangularPrism.surfaceArea);
+
+          break;
+        }
+        case 3:{
+          double radius = 0.0;
+          
+          printf("Enter Radius: ");
+          scanf("%lf", &radius);
+          
+          GEOMETRY sphere = sphereSurfaceArea(radius);
+          
+          printf("\nFormula: 4 * PI * (radius * radius)\n");
+          printf("Input: Radius: %.2lf feet\n", radius);
+          printf("Calculation: 4 * PI * (%.2lf * %.2lf)\n", radius, radius);
+          printf("Surface Area: %.2lf square feet\n", sphere.surfaceArea);
+          
+          break;
+        }
+        case 4:{
+          double height = 0.0;
+          double radius = 0.0;
+          
+          printf("Enter Height: ");
+          scanf("%lf", &height);
+          printf("Enter Radius: ");
+          scanf("%lf", &radius);
+          
+          GEOMETRY cylinder = cylinderSurfaceArea(height, radius);
+          
+          printf("\nFormula: 2 * PI * radius * (height + radius)\n");
+          printf("Input: \n Height: %.2lf feet\n Radius: %.2lf feet\n", height, radius);
+          printf("Calculation: 2 * PI * %.2lf * (%.2lf + %.2lf)\n", radius, height, radius);
+          printf("Surface Area: %.2lf square feet\n", cylinder.surfaceArea);
+          
+          break;
+        }
+        
+        //GEOMETRY PyramidSurfaceArea(...);
+        
+        default:{
+          printf("Invalid Selection! Rerun the program to continue.");
+          break;
+        }
+      }
+    }
+    else if (operation == 4){
+      switch(shape){
+        case 1:{
+          double side = 0.0;
+          
+          printf("\n\nEnter Side: ");
+          scanf("%lf", &side);
+      
+          GEOMETRY cube = cubeVolume(side);
+      
+          printf("\nFormula: side * side * side\n");
+          printf("Input: %.2lf feet\n", side);
+          printf("Calculation: %.2lf * %.2lf * %.2lf\n", side, side, side);
+          printf("Volume: %.2lf cubic feet\n", cube.volume);
+          
+          break;
+        }
+        case 2:{
+          double length = 0.0;
+          double width = 0.0;
+          double height = 0.0;
+          
+          printf("Enter Length: ");
+          scanf("%lf", &length);
+          printf("Enter Width: ");
+          scanf("%lf", &width);
+          printf("Enter Height: ");
+          scanf("%lf", &height);
+          
+          GEOMETRY rectangularPrism = rectangularPrismVolume(length, width, height);
+          
+          printf("\nFormula: length * width * height\n");
+          printf("Inputs: \n Length: %.2lf feet\n Width: %.2lf feet\n Height: %.2lf feet", length, width, height);
+          printf("Calculation: %.2lf * %.2lf * %.2lf\n", length, width, height); 
+          printf("Volume: %.2lf cubic feet\n", rectangularPrism.volume);
+
+          break;
+        }
+        case 3:{
+          double radius = 0.0;
+          
+          printf("Enter Radius: ");
+          scanf("%lf", &radius);
+          
+          GEOMETRY sphere = sphereVolume(radius);
+          
+          printf("\nFormula: (4/3) * PI * (radius * radius * radius)\n");
+          printf("Input: Radius: %.2lf feet\n", radius);
+          printf("Calculation: (4/3) * PI * (%.2lf * %.2lf * %.2lf)\n", radius, radius, radius);
+          printf("Volume: %.2lf cubic feet\n", sphere.volume);
+          
+          break;
+        }
+        case 4:{
+          double height;
+          double radius;
+          
+          printf("Enter Height: ");
+          scanf("%lf", &height);
+          printf("Enter Radius: ");
+          scanf("%lf", &radius);
+          
+          GEOMETRY cylinder = cylinderVolume(height, radius);
+          
+          printf("\nFormula: PI * (radius * radius) * height\n");
+          printf("Input: \n Height: %.2lf feet\n Radius: %.2lf feet\n", height, radius);
+          printf("Calculation: PI * (%.2lf * %.2lf) * %.2lf\n", radius, radius, height);
+          printf("Volume: %.2lf cubic feet\n", cylinder.volume);
+          
+          break;
+        }
+        
+        //GEOMETRY PyramidVolume(...);
         
         default:{
           printf("Invalid Selection! Rerun the program to continue.");
