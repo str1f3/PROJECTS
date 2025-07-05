@@ -14,7 +14,7 @@ Contains a link to my GitBook page, where I conduct proof-of-concept experiments
 Archived coursework and academic exercises from Dakota State University (DSU), demonstrating foundational computer science knowledge and structured problem-solving.
 
 ### SRE
-This section is dedicated to Software Reverse Engineering projects, including static/dynamic analysis, binary dissectionn, and tooling exploration.
+This section is dedicated to Software Reverse Engineering projects, including static/dynamic analysis, binary dissection, and tooling exploration.
 
 ### TRAINING RESOURCES
 A curated collection of self-study materials used for personal learning, coding skill development and malware development.
