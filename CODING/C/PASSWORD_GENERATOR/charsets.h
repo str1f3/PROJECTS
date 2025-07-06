@@ -13,13 +13,23 @@
 #  - Technical: Intended for programs that need predefined character arrays, such as
 #               password generators or data format validators.
 ######################################################################################*/
-​
+
 #ifndef CHARSETS_H
 #define CHARSETS_H
-​
-void populateUppercase(char uppercaseLetters[]);
-void populateLowercase(char lowercaseLetters[]);
-void populateNumbers(char numbers[]);
-void populateSymbols(char symbols[]);
-​
+
+typedef struct{
+  char uppercaseLetters[27];
+  char lowercaseLetters[27];
+  char numbers[10];
+  char symbols[33];
+  char randomPassword[255];
+  char collection[255];
+  
+} PASSWORD;
+
+PASSWORD populateUppercase(void);
+PASSWORD populateLowercase(void);
+PASSWORD populateNumbers(void);
+PASSWORD populateSymbols(void);
+
 #endif
