@@ -37,4 +37,7 @@ This tool is intended for **educational** and **demonstration** purposes. It doe
 ## FILE INTEGRITY
 
 #### SHA-256 CHECKSUM: 
- - b97bca6705533aa8f00f9aab7b167daf2d1c5b2ccb312e02170f83bdf53048d9
+ - sha256sum BitwiseCalculator-v1.0.0-windows-x86-64.exe
+   - ef77652499796507b8bd7f9287af084b0f9f0c763daf489d630c8a05117efa87  BitwiseCalculator-v1.0.0-windows-x86-64.exe
+ - sha256sum BitwiseCalculator-v1.0.1-linux-x86-64      
+   - e5a7c8c156f71d9d673a65e51986ce5fbc3d423a27f6df04bcee79afad60a108  BitwiseCalculator-v1.0.1-linux-x86-64
