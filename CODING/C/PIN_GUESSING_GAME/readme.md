@@ -1,5 +1,9 @@
 # PIN GUESSING GAME
 
+<p align="center">
+  <img src="pinGuessingGame.png" alt="Centered Image">
+</p>
+
 ## OVERVIEW
 
 This is a simple C-based terminal game that simulates a PIN guessing challenge. The user is prompted to guess a hardcoded 4-digit PIN to gain "access" to a simulated system. It's designed as a lightweight demonstration of **input validation**, **looping logic**, and **boolean control flow** in C.
