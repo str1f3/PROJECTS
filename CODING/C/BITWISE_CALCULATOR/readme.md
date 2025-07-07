@@ -32,4 +32,9 @@ This tool is intended for **educational** and **demonstration** purposes. It doe
 ## USE CASES
 
 - Developers needing a quick CLI utility to visualize binary outcomes  
-- Students learning how bitwise operations work in C  
+- Students learning how bitwise operations work in C
+
+## FILE INTEGRITY
+
+#### SHA-256 CHECKSUM: 
+ - b97bca6705533aa8f00f9aab7b167daf2d1c5b2ccb312e02170f83bdf53048d9
