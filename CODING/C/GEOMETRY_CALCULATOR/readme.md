@@ -1,5 +1,9 @@
 # GEOMETRY CALCULATOR
 
+<p align="center">
+ <img src="geometryCalculator.png" alt="Centered Image">
+</p>
+
 ## OVERVIEW
 
 This geometric calculator can be used for quick calculations involving 2D and 3D geometric shapes. Users can compute **area**, **perimeter/circumference**, **surface area**, and **volume** using standard geometric formulas and user-provided inputs.
