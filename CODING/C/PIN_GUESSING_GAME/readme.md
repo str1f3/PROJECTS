@@ -45,7 +45,7 @@ Students or researchers interested in learning how to **bypass the hardcoded PIN
 - [Binary Patching](https://git.cnd.dev/playbook/sre/reverse-engineering/binary-patching)  
 - [Stack Redirection](https://git.cnd.dev/playbook/sre/software-exploitation/stack-redirection)
 
-These tutorials provide hands-on examples of basic software exploitation and binary modification techniques using this very program as a test case.
+These tutorials provide hands-on examples of basic software exploitation and binary modification techniques.
 
 ---
 
