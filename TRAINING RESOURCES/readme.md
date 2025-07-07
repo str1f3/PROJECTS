@@ -9,13 +9,13 @@ This learning plan outlines the resources and topics I am actively pursuing. It 
  - [02.C Essentials 1 (Basics)](https://edube.org/study/ce1 "C Essentials 1 (Basics)")
  - [03.C Essentials 2 (Intermediate)](https://edube.org/study/ce2 "C Essentials 2 (Intermediate)")
  - [04.C Advanced](https://edube.org/study/clp "C Advanced")
- - [05.Beej's Guide to Network Programming](https://beej.us/guide/ "Network Programming")
- - [06.Hands-On Network Programming with C](https://learning.oreilly.com/library/view/hands-on-network-programming/9781789349863/ "Network Programming")
+ - [05.Hands-On Network Programming with C](https://learning.oreilly.com/library/view/hands-on-network-programming/9781789349863/ "Network Programming")
+ - [06.Beej's Guide to Network Programming](https://beej.us/guide/ "Network Programming")
  - [07.Basic Capability Developer](https://ccds.pages.levelup.cce.af.mil/training/basic/curriculum/index.html "Basic Capability Developer")
 
 ##### WINDOWS
- - [01.Programming Windows](https://learning.oreilly.com/library/view/programming-windows-r-fifth/9780735642225/ "Programming Windows®, Fifth Edition")
- - [02.The Forger's Win32 API Tutorial](https://winprog.org/tutorial/ "Win 32 API Tutorial")
+ - [01.The Forger's Win32 API Tutorial](https://winprog.org/tutorial/ "Win 32 API Tutorial")
+ - [02.Programming Windows](https://learning.oreilly.com/library/view/programming-windows-r-fifth/9780735642225/ "Programming Windows®, Fifth Edition")
  - [03.Windows System Programming](https://learning.oreilly.com/library/view/windows-system-programming/9780321658319/ "Windows System Programming")
 
 #### SUPPLEMENTAL
@@ -31,12 +31,11 @@ This learning plan outlines the resources and topics I am actively pursuing. It 
 
 ### C++ PROGRAMMING
 #### MAIN
- - [C++ Essentials 1 (Basics)](https://edube.org/study/cppe1 "C++ Essentials 1 (Basics)")
- - [C++ Essentials – Part 2 (Intermediate)](https://edube.org/study/cppe2 "C++ Essentials – Part 2 (Intermediate)")
- - [C++ Advanced](https://edube.org/study/cpp "C++ Advanced")
+ - [01.C++ w/ Beginner DSA](https://www.codechef.com/roadmap/cpp-dsa "C++ w/ Beginner DSA")
+ - [02.C++ Essentials 1 (Basics)](https://edube.org/study/cppe1 "C++ Essentials 1 (Basics)")
+ - [03.C++ Essentials – Part 2 (Intermediate)](https://edube.org/study/cppe2 "C++ Essentials – Part 2 (Intermediate)")
+ - [04.C++ Advanced](https://edube.org/study/cpp "C++ Advanced")
 
-#### SUPPLEMENTAL
- - [02.C++ with Beginner DSA](https://www.codechef.com/roadmap/cpp-dsa "C++ with Beginner DSA")
 
 ### PYTHON PROGRAMMING
 #### MAIN
