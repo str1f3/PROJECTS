@@ -54,3 +54,8 @@ These tutorials provide hands-on examples of basic software exploitation and bin
 - C programming students practicing loop control and conditional logic
 - Cybersecurity learners exploring password guessing mechanics
 - Basic terminal interaction and logic flow for beginners
+
+## FILE INTEGRITY
+
+#### SHA-256 CHECKSUM: 
+ - 73c06c38311b1b698ceca73e28792e1dd9d2e35268bfa6497fffe3dd74ea8297
