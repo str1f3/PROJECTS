@@ -1,5 +1,9 @@
 # BITWISE CALCULATOR
 
+<p align="center">
+  <img src="bitwiseCalculator.png" alt="Centered Image">
+</p>
+
 ## OVERVIEW
 
 This is a lightweight utility that allows users to perform bitwise operations such as AND, OR, XOR, and NOT using binary input. Results are displayed in formatted 32-bit binary output.
