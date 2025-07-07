@@ -1,4 +1,9 @@
 # OVERVIEW
+
+<p align=center>
+ <img src="passwordGenerator.png" alt="Centered Image">
+</p>
+
 This password generator is a lightweight C-based utility designed to generate randomized, secure passwords based on a user-specified length.
 
 # CURRENT CAPABILITIES
