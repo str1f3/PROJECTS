@@ -36,4 +36,7 @@ This tool is a lightweight, offline calculaor intended for educational use and a
 ## FILE INTEGRITY
 
 #### SHA-256 CHECKSUM: 
- - 32a76350d7d5e5259eb9bdca5f542f5c80e7485a94ace433ecd71391efc3c288
+ - sha256sum GeometryCalculator-v1.0.0-linux-x86-64 
+    - c80a4ba6d018a4ec074d02b9d52d99817e36a48c4459e74fce4b2dd83149d26a  GeometryCalculator-v1.0.0-linux-x86-64
+ - sha256sum GeometryCalculator-v1.0.0-windows-x86-64.exe 
+    - d8f0d677a4db0e93764b6242cf1a965ae75e4f0bcb6cd159ea872ee7bf362fc1  GeometryCalculator-v1.0.0-windows-x86-64.exe
