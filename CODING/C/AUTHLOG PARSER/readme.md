@@ -22,3 +22,8 @@ This tool doesn't replace a full-featured SIEM or HIDS. It is meant as a learnin
 * Blue team analysts scanning Linux authentication logs for brute-force attempts
 * Red team validating how their activity appears in auth logs
 * CTF participants or cybersecurity students exploring host-based log forensics
+
+# FILE INTEGRITY
+
+#### SHA-256 CHECKSUM: 
+ - 344a098feb18ee24dd032a58a6954f267156ed046659cc3d6e7703b04bf8f58c
