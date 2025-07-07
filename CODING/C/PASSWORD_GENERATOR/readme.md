@@ -39,4 +39,5 @@ This utility was created as a practical application of my C programming knowledg
 ## FILE INTEGRITY
 
 #### SHA-256 CHECKSUM: 
- - ea0ae7d40fea65b829a1e612763a067fd030b86934c6a575992f82aae6205a6b
+ - sha256sum PasswordGenerator-v1.0.0-linux-x86-64       
+    - 845362681ad115a0c0e002dfe47d2289d421089ab164cc776bf27950fe437c16  PasswordGenerator-v1.0.0-linux-x86-64
