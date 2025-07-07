@@ -33,4 +33,7 @@ This tool is a lightweight, offline calculaor intended for educational use and a
 - Engineering students practicing C and geometry fundamentals
 - Cybersecurity students reinforcing modular programming and math handling in C
 
----
+## FILE INTEGRITY
+
+#### SHA-256 CHECKSUM: 
+ - 32a76350d7d5e5259eb9bdca5f542f5c80e7485a94ace433ecd71391efc3c288
