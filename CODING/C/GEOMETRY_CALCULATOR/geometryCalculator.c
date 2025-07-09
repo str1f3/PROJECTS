@@ -18,21 +18,22 @@
 
 //mode selector
 int modeSelector(void){
-    int mode;
-    int inputStatus;
+  int mode;
+  int inputStatus;
 
-    while (1){
-        printf("mode: ");
-        inputStatus = scanf("%d", &mode);
-        //if input is successfully read...clear the rest of the line including newline
-        if (inputStatus == 1){
-            while (getchar() != '\n');
-            return mode;
-        } else {
-            printf("Invalid input. Select a number.\n");
-            while (getchar() != '\n');
-        }
+  while (1){
+    printf("mode: ");
+    inputStatus = scanf("%d", &mode);
+    //if input is successfully read...clear the rest of the line including newline
+    if (inputStatus == 1){
+      while (getchar() != '\n');
+        return mode;
+    } 
+    else {
+      printf("Invalid input. Select a number.\n");
+      while (getchar() != '\n');
     }
+  }
 }
 
 int main()
