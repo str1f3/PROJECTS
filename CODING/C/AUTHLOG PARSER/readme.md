@@ -28,5 +28,5 @@ This tool doesn't replace a full-featured SIEM or HIDS. It is meant as a learnin
 ## FILE INTEGRITY
 
 #### SHA-256 CHECKSUM: 
- - sha256sum AuthLogParser-v1.0.0-linux-x86-64  
-    - 5893694c53de3d649b74ad4e878220d7b9fe86f9dbd36485094b38e5e2e35cdd  AuthLogParser-v1.0.0-linux-x86-64
+ - sha256sum Auth-v1.1.1-linux-x86-64
+    - 1510041b05f6254d455811ec03171677c9338d7ea1bd3b3465a282c6261604df  Auth-v1.1.1-linux-x86-64
