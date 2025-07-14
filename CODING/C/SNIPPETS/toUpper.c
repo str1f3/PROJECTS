@@ -32,7 +32,6 @@ char toUpper(char input){
 
 int main(void)
 {
-  // your code goes here
   char input;
   scanf(" %c", &input);
 
