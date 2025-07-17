@@ -22,7 +22,7 @@ int main() {
     puts("PIN NUMBER GUESSING GAME");
     
     do {
-      printf("Enter PIN to unclock the system: ");
+      printf("Enter PIN to unlock the system: ");
       scanf("%4d", &enteredPIN);
       if (enteredPIN != 1337){
           printf("Incorrect PIN. Try again...\n");
