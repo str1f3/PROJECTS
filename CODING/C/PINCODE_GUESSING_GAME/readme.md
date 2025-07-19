@@ -60,5 +60,4 @@ These tutorials provide hands-on examples of basic software exploitation and bin
 #### SHA-256 CHECKSUM: 
  - sha256sum PinGuessingGame-v1.0.0-linux-x86-64      
     - b4d0f591fb528db93731e115ab3b982072b38fa2263961540af90db0e48319b9  PinGuessingGame-v1.0.0-linux-x86-64
- - sha256sum PinGuessingGame-v1.0.0-windows-x86-64.exe 
-    - 95f3a87f0045f4dfbba16c593265f3b5e09c4c6cbaa2277e4c4d49dec501f19b  PinGuessingGame-v1.0.0-windows-x86-64.exe
+ - Get-FileHash -Path .\PinGuessingGame-v1.0.0-windows-x86-64.exe -Algorithm SHA256                                                                                                                                                - BEEF260ADB4886D31B6AA50A0289871F1132C5987733EC0464C51BCEA7E3ECDA
