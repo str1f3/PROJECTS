@@ -24,7 +24,7 @@ This utility is still in development and planned future improvements include:
 
 ## DISCLAIMER
 
-This tool is a lightweight, offline calculaor intended for educational use and as a C programming project. It is not intended to replace CAD tools or any other engineering calculators.
+This tool is a lightweight, offline calculator intended for educational use and as a C programming project. It is not intended to replace CAD tools or any other engineering calculators.
 
 ---
 
