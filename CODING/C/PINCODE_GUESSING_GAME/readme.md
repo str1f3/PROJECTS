@@ -14,7 +14,7 @@ This is a simple C-based terminal game that simulates a PIN guessing challenge. 
 
 - Validates 4-digit integer input (scanf("%4d", ...))
 - Provides feedback and a basic hint loop
-- Reinforces do...while` loop control and user interaction
+- Reinforces do...while loop control and user interaction
 - Uses bool to track system state (accessGranted flag)
 
 ---
