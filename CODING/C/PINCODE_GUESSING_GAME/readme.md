@@ -250,6 +250,8 @@ ghidra > Decompile > double-click "FUN_140001274"
 140001122: 90      nop
 140001123: 90      nop
 140001124: 90      nop
+
+ /* This forces the comparison to always be equal (EAX == EAX), bypassing the PIN check */
 ```
 #### OUTPUT
 <p align="center">
