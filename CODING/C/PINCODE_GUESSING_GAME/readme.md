@@ -102,7 +102,7 @@ ghidra > Sub-Menu > Display Function Graph
 ```
 
 <p align="center">
-  <img src="xxx.png" alt="Centered Image">
+  <img src="pinGuessingGame (Flow Overview).png" alt="Centered Image">
 </p>
 
 ### STEP 3: REBASE (IF REQUIRED)
@@ -253,5 +253,5 @@ ghidra > Decompile > double-click "FUN_140001274"
 ```
 #### OUTPUT
 <p align="center">
-  <img src="xxx.png" alt="Centered Image">
+  <img src="pinGuessingGame (Patched Binary).png" alt="Centered Image">
 </p>
