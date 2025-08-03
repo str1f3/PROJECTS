@@ -62,3 +62,196 @@ These tutorials provide hands-on examples of basic software exploitation and bin
     - b4d0f591fb528db93731e115ab3b982072b38fa2263961540af90db0e48319b9  PinGuessingGame-v1.0.0-linux-x86-64
  - Get-FileHash -Path .\PinGuessingGame-v1.0.0-windows-x86-64.exe -Algorithm SHA256
     - BEEF260ADB4886D31B6AA50A0289871F1132C5987733EC0464C51BCEA7E3ECDA
+---
+PATCHED
+ - Get-FileHash -Path .\PinGuessingGame-v1.0.0-windows-x86-64-PATCHED.exe -Algorithm SHA256                                                                                                                                       - 9737D3D4C51BDD8696BC8885A8969EA0854A9E0F914AFC2BE56DB78D662083A9
+  
+
+## REVERSE ENGINEERING BINARIES: WALKTHROUGH
+
+### STEP 1:  IMPORT AND AUTO-ANALYZE PROJECT FILE
+
+```
+root@dev:~$ .\ghidra
+ghidra > File > New Project > Non-Shared Project
+ Project Directory: {PROJECTS}
+ Project Name: {BINARY_PATCHING}
+​
+ghidra > File > Import File...
+ Filename: {binaryWODebugSymbols.exe}
+ 
+ghidra > Code Browser > binaryWODebugSymbols.exe
+ Analyze: Yes
+ Analysis Options: Default
+ 
+ * Wait for analysis to finish..."Decompile" Section should look like below
+    void entry(void)
+​
+    {
+      __security_init_cookie();
+      FUN_140001274();
+      return;
+    }
+```
+
+### STEP 2: BIG PICTURE OVERVIEW
+
+```
+ghidra > Sub-Menu > Display Function Graph
+
+```
+
+<p align="center">
+  <img src="xxx.png" alt="Centered Image">
+</p>
+
+### STEP 3: REBASE (IF REQUIRED)
+
+#### IDENTIFY BASE ADDRESS (WINDBG)
+```
+PS C:\sre> WinDBG
+ ...
+​
+WinDBG > File > Open Executable > PinGuessingGame-v1.0.0-windows-x86-64.exe
+​
+//list the modules and identify the "base address" of the program
+WinDBG > Command
+ 0:000> lm
+ Start          End          module_name
+ 00c00000       00c6b000     PinGuessingGame   (deferred)
+ 76a70000       76b60000     KERNEL32     (deferred)
+ 770f0000       7730c000     KERNELBASE   (deferred)
+ 77320000       774c4000     ntdll        (pdb symbols)     c:\ProgramData\dbg\sym\wntdll.
+​
+ /* ghidra will be set to the same "base address" found by WinDBG
+    - Base Address: 00c00000
+ */
+
+```
+#### APPLY BASE ADDRESS (GHIDRA)
+
+```
+Ghidra > Sub-Menu > Display Memory Map > Home Icon
+ Base Image Address: 00c00000
+ 
+ /* ghidra's default base address is 00400000 */
+```
+
+### STEP 4: HUNT MAIN()
+#### IDENTIFY PATTERNS (RUNNING PROGRAM)
+This may not always be accurate
+```
+PS C:\sre> .\PinGuessingGame-v1.0.0-windows-x86-64.exe
+ PIN NUMBER GUESSING GAME
+ Enter PIN to unlock the system: ...
+ ...
+```
+
+#### LOCATE PATTERN (GHIDRA)
+```
+ghidra > File > Open > PinGuessingGame-v1.0.0-windows-x86-64.exe
+ filter: main
+ 
+ /* since there is no debug symbols when the executable was compiled, 
+   main won't be found */
+
+ghidra > Symbol Tree > Functions
+ Filter: entry
+ Decompile Section:
+  void entry(void)
+  {
+    __security_init_cookie();
+    FUN_140001274();
+    return;
+  }
+ 
+ /* clicking on "entry" will automatically decompile it
+    - entry is NOT main(), but leads to it
+    - this will drop you to where ghidra thinks the main function can be located */
+ 
+ghidra > Decompile > double-click "FUN_140001274"
+
+ /* The "__scrt_common_main_seh()" is responsible for setting up exception handling and 
+   eventually calling main().
+    - Goal: Find __scrt_common_main();
+    - if "__scrt_common_main_seh()" is NOT listed, look for alternatives such as...
+      "FUN_..."
+       - e.g., FUN_03ad1274()
+       
+ * __scrt_common_main_seh(); is a function commonly found in Windows executables 
+   compiled with Microsoft's C runtime (CRT). It is part of the Microsoft Startup Code 
+   and is involved in setting up exception handling for the main program.
+    - this function is responsible for several things including...
+       - Calling main() or WinMain(): Once the initialization is complete, it calls the
+         user-defined main() (for console apps) or WinMain() (for GUI apps).
+          - __scrt_common_main_seh(); is just a wrapper around main() or WinMain()
+ 
+ * the __security_init_cookie(); is a function that initializes a global security 
+   cookie used to detect stack buffer overflows at runtime. It is part of /GS 
+   (Buffer Security Check), a compiler flag that adds stack canary protection to 
+   functions that may be vulnerable to buffer overflows. */
+      
+#continue w/ working in reverse until the main function pattern is identified
+ ...
+ local_10 = DAT_140004000 ^ (ulonglong)auStack_38;
+ puts("PIN NUMBER GUESSING GAME");
+ FUN_140001020("Enter PIN to unlock the system: ",in_RDX,in_R8,in_R9);
+ puVar2 = local_18;
+ FUN_140001080(&DAT_1400022a4,puVar2,in_R8,in_R9);
+ FUN_140001020("Access granted - System PIN cracked!",puVar2,in_R8,in_R9);
+ iVar1 = FUN_140001170(local_10 ^ (ulonglong)auStack_38);
+ return iVar1;
+  
+ /* if you see __{arbitraryString}...it means that its coming from imports
+    - Symbol Tree > Imports > KERNEL32.DLL */
+
+#typically, the first function encountered when working in reverse that DOESN'T start 
+ w/ __ should be the main function
+ 
+ iVar1 = FUN_00401010();
+ _exit(iVar1);
+ __cexit();
+ return iVar1;
+  
+ * double click the FUN_00401010() in iVar1 = FUN_00401010(); to get to its 
+   memory location
+ 
+ undefined4 FUN_00401010(void)
+ {
+   int iVar1;
+   
+   iVar1 = FUN_00401000(1, 2, 3);
+   _printf(&DAT_0040c000,iVar1);
+   return 0;
+ }
+ 
+#rename and change the function signature to make it clear to ghidra that this is the main function
+
+ ***********************
+ *  FUNCTION           *
+ ***********************
+ undefined4 __stdcall FUN_00401010(void)    //hit the "l" key on the keyboard or right-click it to rename
+  - rename FUN... to main
+```
+
+### STEP 5: LOCATE AND PATCH PERTINENT INSTRUCTION
+#### INSTRUCTION TO PATCH
+```
+14000111d: 81 7c 24 20 39 05 00 00    cmp dword ptr [rsp + 0x20], 0x539
+140001125: 74 15                      je  0x14000113c
+```
+
+#### PATCHED VERSION
+```
+14000111d: 39 c0   cmp eax, eax
+14000111f: 90      nop
+140001120: 90      nop
+140001121: 90      nop
+140001122: 90      nop
+140001123: 90      nop
+140001124: 90      nop
+```
+#### OUTPUT
+<p align="center">
+  <img src="xxx.png" alt="Centered Image">
+</p>
