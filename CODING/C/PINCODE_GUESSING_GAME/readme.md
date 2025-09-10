@@ -41,9 +41,9 @@ This program is for **educational use** only. It is not meant to simulate real-w
 
 Students or researchers interested in learning how to **bypass the hardcoded PIN mechanism** through string/binary patching or stack-based redirection can follow step-by-step guides available on my GitBook:
 
-- [String Patching](https://git.cnd.dev/playbook/sre/binary-exploitation/binary-modification/string-patching)
-- [Binary Patching](https://git.cnd.dev/playbook/sre/binary-exploitation/binary-modification/binary-patching)
-- [Stack Redirection](https://git.cnd.dev/playbook/sre/software-exploitation/stack-redirection)
+- [String Patching](https://git.cnd.dev/playbook/sre/exploit-development/binary-exploitation/binary-modification/string-patching)
+- [Binary Patching](https://git.cnd.dev/playbook/sre/exploit-development/binary-exploitation/binary-modification/binary-patching)
+- [Stack Redirection](https://git.cnd.dev/playbook/sre/exploit-development/binary-exploitation/memory-corruption/buffer-overflow/stack-redirection)
 
 These tutorials provide hands-on examples of basic software exploitation and binary modification techniques.
 
