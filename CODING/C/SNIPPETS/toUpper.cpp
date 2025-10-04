@@ -61,7 +61,7 @@ char toUpper(char input){
 
 int main(int argc, char *argv[])
 {
-  if (argc == 0){
+  if (argc < 2){
     //display usage if only programName is supplied
 	cout << "Usage: ./toUpper-v0.0.1-linux-x86-64 {single character input}" << endl;
 	return 1;
