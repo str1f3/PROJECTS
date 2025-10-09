@@ -9,9 +9,6 @@
 This is a lightweight CLI utility designed for quick direct text entry to a specified file path.
 
 ## CURRENT CAPABILITIES
-### File Path Prompt
-* Scans for repeated failed login attempts
-
 ### Character-by-Character Input
 * Captures and writes input from STDIN until EOF is detected.
   
