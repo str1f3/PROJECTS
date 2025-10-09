@@ -1,14 +1,15 @@
 # AUTHLOG PARSER
 
 <p align="center">
-  <img src="authLogParserFailedLoginsWIP.png" alt="Centered Image">
+  <img src="authLogParserFailedLoginsWIP.png" alt="Failed Logins">
 </p>
 
 <p align="center">
-  <img src="authLogParserSuccessfulLoginsWIP.png" alt="Centered Image">
+  <img src="authLogParserSuccessfulLoginsWIP.png" alt="Successful Logins">
 </p>
 
-
+<p align="center">
+  <img src="authLogParserValidusersWIP.png" alt="Valid Users"
 
 
 ## OVERVIEW
