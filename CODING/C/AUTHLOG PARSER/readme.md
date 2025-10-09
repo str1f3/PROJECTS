@@ -18,7 +18,7 @@ AUTHLOG PARSER is a lightweight C utility designed to help blue team analysts to
 ## FUTURE DEVELOPMENT
 This tool is in early development and will be expanded to include:
 * Detection of command injection attempts based on login activity context.
-* Integration with system user validation to differentiate mistyped credentials from malciious attempts
+* Integration with system user validation to differentiate mistyped credentials from malicious attempts
 * Advanced parsing logic to correlate IP addresses, usernames, and frequency patterns.
 * Additional detection modes based on emerging threat intelligence and blue team feedback.
 
