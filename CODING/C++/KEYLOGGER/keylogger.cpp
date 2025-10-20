@@ -4,7 +4,7 @@
 # Version: 1.0.0
 #  - Major.Minor.Update/BuildNumber
 # Date: 201528OCT25
-# Filename: keylogger.c
+# Filename: keylogger.cpp
 # Dependency: N/A
 # Compile Cmd: g++ -m64 -O1 keylogger.c -o keylogger-v1.0.0-win-x86-64
 # Synopsis:
@@ -173,4 +173,5 @@ int main()
 //it returns 0 key wasn't pressed since last call and -32767 (0x8001) if key was just pressed (transitioned from up to down) once
 // - Think...has the user pressed any keys yet? if yes, then store it in the specified variable then send to file
 //the specific simply prevents repeated logging if the user holds a key down - it will only logs a key it's its first
+
 
