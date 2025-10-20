@@ -19,13 +19,13 @@ This project is an educational research prototype intended to help security prof
 
 ## FUTURE DEVELOPMENT
 This tool is in early development and only 90% complete. It will be expanded to include:
-* capturing the following missing keys (-, +)
+* Capturing the following missing keys (-, +)
 * Broader key and layout coverage (including non-ASCII input and international keyboard layouts).
 * Instrumentation hooks to help defenders detect the presence of keystroke capture.
 * Documentation on how to create detection signatures
 
 ## DISCLAIMER:
-This tool carries serious privacy and legal risks: secretive or excessive use undermines trust, may violate laws, and increases organizational liability. Ethical practice requires clear documentation, written consent, minimal data collection, secure storage, strict access controls, and testing only in isolated environments you control.
+This tool carries serious privacy and legal risks: secretive or excessive use undermines trust, may violate laws, and increases organizational liability. Ethical practice requires clear documentation, written consent, minimal data collection, secure storage, strict access controls, and testing only in isolated controlled environments.
 
 ## USE CASES
 * Blue team
