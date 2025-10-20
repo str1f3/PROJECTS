@@ -2,7 +2,7 @@
 # KEYLOGGER
 
 <p align="center">
-  <img src="keyloggerScreenshot.png" alt="Keylogger Screenshot">
+  <img src="keyloggerScreenshot.PNG" alt="Keylogger Screenshot">
 </p>
 
 ## OVERVIEW
