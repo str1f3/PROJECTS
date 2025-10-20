@@ -164,14 +164,18 @@ int main()
 	return 0;
 }
 
-//sleep(0);
-//this sleep function prevents the CPU from maxing out but its not the best solutions
-//this pauses the program specified in milliseconds
-//putting 0 tells the program to stop using the CPU whenever another program wants to use it
+//sleep(0); 
+//pauses the program briefly to prevent it from using 100% CPU
+//0 (milliseconds) tells the program to stop using the CPU whenever another program wants to use it
 
-//The GetAsyncKeyState is a system interrupt function checks the current state of a key
-//it returns 0 key wasn't pressed since last call and -32767 (0x8001) if key was just pressed (transitioned from up to down) once
-// - Think...has the user pressed any keys yet? if yes, then store it in the specified variable then send to file
-//the specific simply prevents repeated logging if the user holds a key down - it will only logs a key it's its first
+
+// GetAsyncKeyState is a Windows API function that checks the state of a virtual key.
+// It returns a short (16-bit) value:
+//   - The most significant bit (0x8000) is set if the key is currently down.
+//   - The least significant bit (0x0001) is set if the key was pressed since the last call.
+// If the return value is -32767 (0x8001), it means the key was just pressed (transitioned from up to down).
+// This helps prevent repeated logging when a key is held down; it logs only on the initial press.
+
+
 
 
