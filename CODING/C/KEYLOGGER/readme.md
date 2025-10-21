@@ -37,8 +37,8 @@ This tool carries serious privacy and legal risks: secretive or excessive use un
  
 ## TERMINATION STEPS
 <pre>
-  PS C:\> Get-Process -Name keylogger  
-  PS C:\> Stop-Process -Name keylogger
+  PS C:\> Get-Process -Name keyCapture  
+  PS C:\> Stop-Process -Name keyCapture
 </pre>
 
 ## FILE INTEGRITY
