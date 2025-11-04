@@ -44,7 +44,8 @@ This tool carries serious privacy and legal risks: secretive or excessive use un
 ## FILE INTEGRITY
 
 #### SHA-256 CHECKSUM: 
- - PS D:\TMP\SHARED> Get-FileHash .\keylogger.exe -Algorithm SHA256
+ - PS D:\TMP\SHARED> Get-FileHash .\keyCapture.exe -Algorithm SHA256
+
    Algorithm       Hash                                                                   Path
    ---------       ----                                                                   ----
-   SHA256          837B22F8617CC09F4B71B1A34ADEC2FEB355FD72EB40458A5A056EB646797E15       D:\TMP\SHARED\keylogger.exe
+   SHA256          9B6433C0A5E87E9D7BAF9F514DD154AFC74625D36C9AAD2708C03EDA359FBFF7       C:\Users\defender\Desktop\key...
