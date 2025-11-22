@@ -1,7 +1,7 @@
 # PIN GUESSING GAME
 
 <p align="center">
-  <img src="pinGuessingGame.png" alt="Centered Image">
+  <img src="pinGuessingGameCpp.png" alt="Centered Image">
 </p>
 
 ## OVERVIEW
