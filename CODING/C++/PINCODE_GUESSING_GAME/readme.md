@@ -51,7 +51,7 @@ These tutorials provide hands-on examples of basic software exploitation and bin
 
 ## USE CASES
 
-- C programming students practicing loop control and conditional logic
+- C++ programming students practicing loop control and conditional logic
 - Cybersecurity learners exploring password guessing mechanics
 - Basic terminal interaction and logic flow for beginners
 
