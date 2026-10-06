@@ -1,3 +1,10 @@
+# NIX COLLECTOR
+
+<p align="center">
+  <img src="nixCollector.png" alt="NIX Enumeration">
+</p>
+
+
 ## OVERVIEW
 
 This is a lightweight C-based Linux data collection utility being developed to explore a hypothetical capability gap involving the collection of raw data from a Linux target system.
