@@ -1,7 +1,7 @@
 # NIX COLLECTOR
 
 <p align="center">
-  <img src="nixCollectorDemo.png" alt="NIX Enumeration">
+  <img src="nixCollectorDemo.PNG" alt="NIX Enumeration">
 </p>
 
 
