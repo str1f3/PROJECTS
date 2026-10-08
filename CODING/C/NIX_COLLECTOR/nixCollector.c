@@ -14,8 +14,7 @@ int main(int argc, char *argv[])
     FILE *fhDestination = fopen(argv[2], "w");
     
     while(NULL != *environPointer){
-        //// Determine the actual string length so we don't just write blindly
-        //don't blindly assume the amount of data you're writing. Determine the actual size of the data first.
+        
         size_t bufferSize = strlen(*environPointer);
         fwrite(*environPointer, 1, bufferSize, fhDestination);
         fwrite("\n", 1, 1, fhDestination);
